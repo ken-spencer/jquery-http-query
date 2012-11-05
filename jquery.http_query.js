@@ -1,6 +1,6 @@
 (function($)
 {
-    /* Jquery HTTP Plugin Version 1.0
+    /* Jquery HTTP Query Plugin Version 1.0
     *  Copyright 2012, Kenneth Spencer
     *  Dual licensed under the MIT or GPL Version 2 licenses.
     */
