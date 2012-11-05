@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="EN" class="sb-html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jquery HTTP query Plugin</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="jquery.http_query.js"></script>
+
+<style>
+
+body {
+    font: normal 11px sans-serif;
+}
+
+</style>
+
+</head>
+<body>
+    
+<h1> Build HTTP Query String </h1>
+
+<h3> Build a query strig from the following object </h3>
+<pre>
+    var query = {
+        foo : 'bar',
+        test : 'test string'
+    };
+</pre>
+
+<div id="build-query-string-result"> </div>
+
+<br />
+<button id="set-query-string"> Set Browser Query String </button>
+
+<script>
+$(document).ready(function()
+{
+
+    var query = {
+        foo : 'bar',
+        test : 'test string'
+    };
+
+    var queryString = $.buildQuery(query);
+
+    $("#build-query-string-result").text('Result: "' + queryString + '"');
+    console.log(window.location);
+
+    $('#set-query-string').on('click', function()
+    {
+        window.location.search = queryString;
+    });
+
+});
+
+
+</script>
+
+    
+<h1> Parse HTTP Query String </h1>
+<h3 id="query-string-table-caption">Parse query string: </h3>
+
+<table id="query-string-table">
+<thead>
+    <td> Key </td>
+    <td> Value </td>
+</thead>
+<tbody></tbody>
+</table>
+
+<script>
+
+$(document).ready(function()
+{
+    var caption = $("#query-string-table-caption");
+    var table = $("#query-string-table");
+    var tbody = $("#query-string-table tbody");
+
+    var queryString = "foo=bar&test=my+test";
+
+    caption.text(caption.text() + ' "' + queryString + '"'); 
+
+    var query = $.parseQueryString(queryString);
+
+    for (var key in query) {
+        tbody.append('<TR><td>' + key + '</td><td>' + query[key] + '</td></TR>');
+    
+    }
+});
+
+</script>
+
+</body>
+</html>
