@@ -1,4 +1,4 @@
-# jquery.HTTP
+# jquery-http-query
 
 A simple plugin for building and parsing HTTP query strings
 
