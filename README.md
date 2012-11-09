@@ -6,7 +6,7 @@ A simple plugin for building and parsing HTTP query strings
 
 Include script *after* the jQuery library:
 
-    <script src="/path/to/jquery.http_query.js"></script>
+    <script src="/path/to/jquery.httpQuery.js"></script>
 
 ** Do not include the script directly from GitHub
 
