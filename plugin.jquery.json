@@ -1,0 +1,28 @@
+{
+  "name": "http-query",
+  "title": "HTTP Query",
+  "description": "jQuery plugin for building and parsing HTTP query strings",
+  "keywords": [
+    "http",
+    "get",
+    "parse",
+    "post"
+  ],
+  "version": "1.0",
+  "author": {
+    "name": "Kenneth Spencer",
+    "url": "https://github.com/ken-spencer"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ken-spencer/jquery-http-query/MIT-LICENSE.txt"
+    }
+  ],
+  "bugs": "https://github.com/ken-spencer/jquery-http-query/issues",
+  "docs": "https://github.com/ken-spencer/jquery-http-query",
+  "download": "http://code.smallboxsoftware.net/#http-query",
+  "dependencies": {
+    "jquery": ">=1.7"
+  }
+}
